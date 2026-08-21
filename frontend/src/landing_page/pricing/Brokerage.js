@@ -6,7 +6,7 @@ function Brokerage() {
       <div className="row border-top mt-5 p-5">
         <div className="col-8 mt-5">
           <a href="" style={{textDecoration:"none"}}> <h3 style={{marginLeft:"155px"}} className="fs-4">Brokerage calculator</h3></a>
-          <ul className="mt-3 p-3 text-muted" style={{textAlign: "left", lineHeight: "2.5rem"}}>
+          <ul className="mt-3 p-3 text-muted" style={{textAlign: "left", lineHeight: "2.5"}}>
             <li>
               Call & Trade and RMS auto-squareoff: Additional charges of ₹50 +
               GST per order.
