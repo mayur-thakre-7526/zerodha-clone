@@ -26,7 +26,7 @@ const Holdings = () => {
             const dayClass = stock.isLoss ? "loss" : "profit";
 
             return (
-              <tr>
+              <tr key={idx}>
                 <td>{stock.name}</td>
                 <td>{stock.qty}</td>
                 <td>{stock.avg.toFixed(2)}</td>
