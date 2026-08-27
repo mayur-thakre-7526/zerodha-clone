@@ -210,8 +210,36 @@ app.post("/newOrder", async (req, res) => {
   res.send("Order Saved!");
 });
 
-app.listen(PORT, () => {
-  console.log("app started!");
-  mongoose.connect(uri);
-  console.log("DB Connected!");
-});
+// app.listen(PORT, () => {
+//   console.log("app started!");
+//   mongoose.connect(uri);
+//   console.log("DB Connected!");
+// });
+
+// const startServer = async () => {
+//   try {
+//     await mongoose.connect(uri);
+//     console.log("DB Connected!");
+
+//     app.listen(PORT, () => {
+//       console.log(`Server started on port ${PORT}`);
+//     });
+//   } catch (err) {
+//     console.log("DB Connection Error:", err);
+//   }
+// };
+
+// startServer();
+
+mongoose
+  .connect(uri)
+  .then(() => {
+    console.log("DB Connected!");
+
+    app.listen(PORT, () => {
+      console.log(`Server started on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log("DB Connection Error:", err);
+  });
